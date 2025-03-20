@@ -1,0 +1,66 @@
+
+import React from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+
+const CtaSection = () => {
+  return (
+    <section id="cta" className="py-20 px-6 md:px-12 bg-gradient-to-r from-mesatech-blue to-mesatech-blue-dark text-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Pronto para transformar seu restaurante?</h2>
+            <p className="text-xl opacity-90 mb-8">
+              Junte-se aos milhares de restaurantes que já economizam tempo, reduzem erros e aumentam os lucros com o MesaTech.
+            </p>
+            <ul className="space-y-4 mb-8">
+              {[
+                "Comece a usar em menos de 24 horas",
+                "Suporte técnico 7 dias por semana",
+                "Treinamento gratuito para sua equipe",
+                "30 dias de teste sem compromisso"
+              ].map((item, index) => (
+                <li key={index} className="flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-mesatech-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div className="bg-white p-8 rounded-xl shadow-xl">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">Experimente gratuitamente</h3>
+            <form className="space-y-4">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nome do restaurante</label>
+                <Input id="name" type="text" placeholder="Ex: Cantina Bella Napoli" className="w-full" />
+              </div>
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Seu nome</label>
+                <Input id="name" type="text" placeholder="Ex: Carlos Oliveira" className="w-full" />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-mail profissional</label>
+                <Input id="email" type="email" placeholder="Ex: contato@seurestaurante.com" className="w-full" />
+              </div>
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                <Input id="phone" type="tel" placeholder="(00) 00000-0000" className="w-full" />
+              </div>
+              <Button className="w-full bg-mesatech-orange hover:bg-mesatech-orange-dark text-white font-medium py-2 px-4 rounded-lg">
+                Começar teste gratuito
+              </Button>
+              <p className="text-xs text-gray-500 text-center mt-4">
+                Ao se cadastrar, você concorda com nossos Termos de Serviço e Política de Privacidade.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CtaSection;

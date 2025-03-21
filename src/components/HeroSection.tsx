@@ -38,18 +38,17 @@ const HeroSection = () => {
                 Sistema completo para restaurantes
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Gerencie Seu Restaurante com o <span className="bg-gradient-to-r from-mesatech-blue to-mesatech-blue-dark bg-clip-text text-transparent">Mesa</span>
-                <span className="text-mesatech-orange">Tech</span>
+                Gerencie Seu Restaurante com Eficiência e Sem Erros!
               </h1>
             </div>
             
             <p className={`text-lg text-gray-600 max-w-xl transition-all duration-700 delay-100 transform ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              Pedidos sem erro, pagamentos rápidos e clientes mais satisfeitos no seu restaurante!
+              Transforme o atendimento, elimine falhas nos pedidos e agilize os pagamentos com nossa solução intuitiva.
             </p>
 
             <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-200 transform ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <button className="cta-button">
-                Melhore seu restaurante agora! Inscreva-se grátis
+                Experimente Gratuitamente
               </button>
               
               <button className="inline-flex items-center justify-center px-6 py-3 font-medium bg-white border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">

@@ -9,7 +9,7 @@ const CtaSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Pronto para transformar seu restaurante?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Transforme seu restaurante com tecnologia e aumente a satisfação dos seus clientes!</h2>
             <p className="text-xl opacity-90 mb-8">
               Junte-se aos milhares de restaurantes que já economizam tempo, reduzem erros e aumentam os lucros com o MesaTech.
             </p>
@@ -31,15 +31,15 @@ const CtaSection = () => {
           </div>
           
           <div className="bg-white p-8 rounded-xl shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Experimente gratuitamente</h3>
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">Cadastre-se Agora e Tenha Acesso Imediato!</h3>
             <form className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nome do restaurante</label>
                 <Input id="name" type="text" placeholder="Ex: Cantina Bella Napoli" className="w-full" />
               </div>
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Seu nome</label>
-                <Input id="name" type="text" placeholder="Ex: Carlos Oliveira" className="w-full" />
+                <label htmlFor="owner" className="block text-sm font-medium text-gray-700 mb-1">Seu nome</label>
+                <Input id="owner" type="text" placeholder="Ex: Carlos Oliveira" className="w-full" />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-mail profissional</label>
@@ -49,7 +49,7 @@ const CtaSection = () => {
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
                 <Input id="phone" type="tel" placeholder="(00) 00000-0000" className="w-full" />
               </div>
-              <Button className="w-full bg-mesatech-orange hover:bg-mesatech-orange-dark text-white font-medium py-2 px-4 rounded-lg">
+              <Button className="w-full bg-mesatech-orange hover:bg-mesatech-orange-dark text-white font-medium py-3 px-4 rounded-lg text-lg">
                 Começar teste gratuito
               </Button>
               <p className="text-xs text-gray-500 text-center mt-4">

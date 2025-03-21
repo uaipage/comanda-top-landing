@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <span className="text-2xl font-bold bg-gradient-to-r from-mesatech-blue to-mesatech-blue-dark bg-clip-text text-transparent">
-            Mesa<span className="text-mesatech-orange">Tech</span>
+            Comanda<span className="text-mesatech-orange">Top</span>
           </span>
         </div>
         

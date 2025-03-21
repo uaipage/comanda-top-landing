@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <span className="text-2xl font-bold text-white">
-                Mesa<span className="text-mesatech-orange">Tech</span>
+                Comanda<span className="text-mesatech-orange">Top</span>
               </span>
             </div>
             <p className="mb-6 opacity-80">
@@ -55,7 +55,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <Mail size={18} className="mr-2 text-mesatech-orange" />
-                <a href="mailto:contato@mesatech.com.br">contato@mesatech.com.br</a>
+                <a href="mailto:contato@comandatop.com.br">contato@comandatop.com.br</a>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 text-mesatech-orange" />
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 pt-8 mt-8 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center">
-          <p>© {new Date().getFullYear()} MesaTech. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} ComandaTop. Todos os direitos reservados.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
             <a href="#" className="hover:text-white transition-colors">Privacidade</a>

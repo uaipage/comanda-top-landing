@@ -37,7 +37,7 @@ const ComparisonSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Compare e veja a diferença</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Entenda como a gestão digital com MesaTech transforma a operação do seu restaurante em comparação com métodos tradicionais.
+            Entenda como a gestão digital com ComandaTop transforma a operação do seu restaurante em comparação com métodos tradicionais.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ const ComparisonSection = () => {
               <tr>
                 <th className="text-left p-4 bg-gray-100 rounded-tl-lg">Aspecto</th>
                 <th className="p-4 bg-gray-200 text-center">Gestão Tradicional</th>
-                <th className="p-4 bg-mesatech-blue text-white text-center rounded-tr-lg">Gestão com MesaTech</th>
+                <th className="p-4 bg-mesatech-blue text-white text-center rounded-tr-lg">Gestão com ComandaTop</th>
               </tr>
             </thead>
             <tbody>

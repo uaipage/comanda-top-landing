@@ -42,7 +42,7 @@ const SolutionSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">A solução completa para seu restaurante</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            O MesaTech transforma a experiência do seu restaurante com um sistema integrado que elimina problemas operacionais e aumenta sua lucratividade.
+            O ComandaTop transforma a experiência do seu restaurante com um sistema integrado que elimina problemas operacionais e aumenta sua lucratividade.
           </p>
         </div>
 

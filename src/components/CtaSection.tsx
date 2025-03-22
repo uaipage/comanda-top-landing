@@ -11,7 +11,7 @@ const CtaSection = () => {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Transforme seu restaurante com tecnologia e aumente a satisfação dos seus clientes!</h2>
             <p className="text-xl opacity-90 mb-8">
-              Junte-se aos milhares de restaurantes que já economizam tempo, reduzem erros e aumentam os lucros com o MesaTech.
+              Junte-se aos milhares de restaurantes que já economizam tempo, reduzem erros e aumentam os lucros com o ComandaTop.
             </p>
             <ul className="space-y-4 mb-8">
               {[

@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      quote: "Depois de implementar o MesaTech, reduzimos o tempo de atendimento em 40% e aumentamos o faturamento em 25% no primeiro trimestre.",
+      quote: "Depois de implementar o ComandaTop, reduzimos o tempo de atendimento em 40% e aumentamos o faturamento em 25% no primeiro trimestre.",
       author: "Carlos Oliveira",
       role: "Proprietário, Cantina Bella Napoli",
       rating: 5
@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">O que nossos clientes dizem</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Restaurantes de todos os tamanhos já transformaram suas operações com o MesaTech.
+            Restaurantes de todos os tamanhos já transformaram suas operações com o ComandaTop.
           </p>
         </div>
 

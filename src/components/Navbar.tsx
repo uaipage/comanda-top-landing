@@ -9,11 +9,13 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { useIsMobile } from '@/hooks/use-mobile';
+import { useI18n } from '@/context/i18nContext';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useI18n();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,53 +27,66 @@ const Navbar = () => {
   }, []);
 
   const navigationLinks = [
-    { href: "#features", label: "Recursos" },
-    { href: "#pricing", label: "Preços" },
-    { href: "#testimonials", label: "Depoimentos" },
-    { href: "#faq", label: "FAQ" }
+    { href: "#features", label: t("resources") },
+    { href: "#pricing", label: t("pricing") },
+    { href: "#testimonials", label: t("testimonials") },
+    { href: "#faq", label: t("faq") }
   ];
 
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 py-4',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-6 md:px-12 py-4',
         {
-          'bg-white/80 backdrop-blur-md shadow-sm': scrolled,
+          'bg-white/90 backdrop-blur-md shadow-sm': scrolled,
           'bg-transparent': !scrolled
         }
       )}
+      aria-label="Navegação principal"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <span className="text-2xl font-bold bg-gradient-to-r from-mesatech-blue to-mesatech-blue-dark bg-clip-text text-transparent">
+          <a 
+            href="#" 
+            className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-mesatech-blue to-mesatech-blue-dark bg-clip-text text-transparent focus:outline-none focus:ring-2 focus:ring-mesatech-blue rounded-md"
+            aria-label="ComandaTop - Página inicial"
+          >
             Comanda<span className="text-mesatech-orange">Top</span>
-          </span>
+          </a>
         </div>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-4 lg:space-x-8">
           {navigationLinks.map((link) => (
             <a 
               key={link.href}
               href={link.href} 
-              className="text-gray-700 hover:text-mesatech-blue transition-colors"
+              className="text-gray-700 hover:text-mesatech-blue transition-colors focus:outline-none focus:ring-2 focus:ring-mesatech-blue rounded-md px-2 py-1"
+              aria-label={link.label}
             >
               {link.label}
             </a>
           ))}
         </div>
         
-        <div>
-          <button className="hidden md:inline-flex bg-mesatech-blue hover:bg-mesatech-blue-dark text-white px-4 py-2 rounded-lg transition-colors shadow-sm">
-            Entrar
+        <div className="flex items-center space-x-2">
+          <button 
+            className="hidden md:inline-flex bg-mesatech-blue hover:bg-mesatech-blue-dark text-white px-4 py-2 rounded-lg transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-mesatech-blue focus:ring-offset-2"
+            aria-label={t("login")}
+          >
+            {t("login")}
           </button>
           
           {/* Mobile Menu */}
-          {isMobile ? (
+          {isMobile && (
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
               <DrawerTrigger asChild>
-                <button className="md:hidden text-gray-700 p-1 rounded-md focus:outline-none">
-                  <Menu className="w-6 h-6" />
+                <button 
+                  className="md:hidden text-gray-700 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-mesatech-blue"
+                  aria-label="Abrir menu de navegação"
+                  aria-expanded={isOpen}
+                >
+                  <Menu className="w-6 h-6" aria-hidden="true" />
                 </button>
               </DrawerTrigger>
               <DrawerContent className="p-4">
@@ -80,8 +95,11 @@ const Navbar = () => {
                     Comanda<span className="text-mesatech-orange">Top</span>
                   </span>
                   <DrawerClose asChild>
-                    <button className="rounded-sm text-gray-500 hover:text-gray-700">
-                      <X className="h-6 w-6" />
+                    <button 
+                      className="rounded-full p-2 text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-mesatech-blue"
+                      aria-label="Fechar menu de navegação"
+                    >
+                      <X className="h-6 w-6" aria-hidden="true" />
                     </button>
                   </DrawerClose>
                 </div>
@@ -91,24 +109,21 @@ const Navbar = () => {
                     <a
                       key={link.href}
                       href={link.href}
-                      className="px-4 py-2 text-lg border-b border-gray-100 text-gray-700 hover:text-mesatech-blue transition-colors"
+                      className="px-4 py-3 text-lg border-b border-gray-100 text-gray-700 hover:text-mesatech-blue transition-colors focus:outline-none focus:ring-2 focus:ring-mesatech-blue rounded-md"
                       onClick={() => setIsOpen(false)}
                     >
                       {link.label}
                     </a>
                   ))}
-                  <button className="w-full mt-4 bg-mesatech-blue hover:bg-mesatech-blue-dark text-white px-4 py-3 rounded-lg transition-colors shadow-sm text-center">
-                    Entrar
+                  <button 
+                    className="w-full mt-4 bg-mesatech-blue hover:bg-mesatech-blue-dark text-white px-4 py-3 rounded-lg transition-colors shadow-sm text-center focus:outline-none focus:ring-2 focus:ring-mesatech-blue focus:ring-offset-2"
+                    aria-label={t("login")}
+                  >
+                    {t("login")}
                   </button>
                 </div>
               </DrawerContent>
             </Drawer>
-          ) : (
-            <button className="md:hidden text-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
           )}
         </div>
       </div>

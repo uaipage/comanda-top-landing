@@ -1,0 +1,38 @@
+name: Deploy para GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛠️ Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 📦 Instalar dependências
+        run: npm install
+
+      - name: Create .env.production
+        run: |
+          echo "VITE_BASE_PROJECT_PATH=${{ github.repository }}" > .env.production
+
+      - name: 🏗️ Construir o projeto
+        env:
+          VITE_BASE_PROJECT_PATH: "${{ github.event.repository.name }}"
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
+          token: ${{ secrets.GITHUB_TOKEN }}

@@ -5,10 +5,12 @@ import Navbar from "@/components/Navbar";
 import ProblemsSection from "@/components/ProblemsSection";
 import SolutionSection from "@/components/SolutionSection";
 import ComparisonSection from "@/components/ComparisonSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import FaqSection from "@/components/FaqSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+
+// Importando TestimonialsSection mas mantendo-o comentado para uso futuro
+// import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Index = () => {
   return (
@@ -18,7 +20,8 @@ const Index = () => {
       <ProblemsSection />
       <SolutionSection />
       <ComparisonSection />
-      <TestimonialsSection />
+      {/* Seção de testemunhos temporariamente removida */}
+      {/* <TestimonialsSection /> */}
       <FaqSection />
       <CtaSection />
       <Footer />

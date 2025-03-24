@@ -6,8 +6,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useI18n } from '@/context/i18nContext';
 
 const FaqSection = () => {
+  const { t } = useI18n();
+  
   const faqs = [
     {
       question: "Como funciona o cadastro?",
@@ -36,20 +39,20 @@ const FaqSection = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 px-6 md:px-12 bg-white">
+    <section id="faq" className="py-20 px-4 sm:px-6 md:px-12 bg-white" aria-labelledby="faq-heading">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Perguntas Frequentes</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Tire suas dúvidas sobre o ComandaTop e descubra como podemos ajudar seu restaurante.
+        <div className="text-center mb-12 md:mb-16">
+          <h2 id="faq-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{t("faqTitle")}</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+            {t("faqDesc")}
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full" aria-label="Perguntas frequentes">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left text-lg font-medium">
+                <AccordionTrigger className="text-left text-base sm:text-lg font-medium py-4">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600">

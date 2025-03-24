@@ -40,7 +40,7 @@ async function createServer() {
       } else {
         // Em produção, carrega o template e o renderer SSR diretamente
         template = fs.readFileSync(path.resolve(__dirname, 'dist/client/index.html'), 'utf-8');
-        render = (await import('./dist/server/entry-server.js')).render;
+        render = (await import('./dist/server/entry-server.tsx')).render;
       }
 
       // Renderiza o aplicativo React no servidor

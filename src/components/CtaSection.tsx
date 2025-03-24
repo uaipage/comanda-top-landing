@@ -15,6 +15,28 @@ const CtaSection = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
+  const formatName = (value: string) => {
+    // Capitalizando a primeira letra de cada palavra
+    return value.replace(/\b\w/g, char => char.toUpperCase());
+  };
+
+  const formatEmail = (value: string) => {
+    // Converte email para minúsculas
+    return value.toLowerCase();
+  };
+
+  const handleRestaurantNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setRestaurantName(formatName(e.target.value));
+  };
+
+  const handleOwnerNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setOwnerName(formatName(e.target.value));
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(formatEmail(e.target.value));
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
@@ -78,7 +100,7 @@ const CtaSection = () => {
                   placeholder="Ex: Cantina Bella Napoli" 
                   className="w-full text-gray-800" 
                   value={restaurantName}
-                  onChange={(e) => setRestaurantName(e.target.value)}
+                  onChange={handleRestaurantNameChange}
                   aria-required="true"
                 />
               </div>
@@ -90,19 +112,19 @@ const CtaSection = () => {
                   placeholder="Ex: Carlos Oliveira" 
                   className="w-full text-gray-800" 
                   value={ownerName}
-                  onChange={(e) => setOwnerName(e.target.value)}
+                  onChange={handleOwnerNameChange}
                   aria-required="true"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-mail profissional</label>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
                 <Input 
                   id="email" 
                   type="email" 
                   placeholder="Ex: contato@seurestaurante.com" 
                   className="w-full text-gray-800" 
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={handleEmailChange}
                   aria-required="true"
                 />
               </div>

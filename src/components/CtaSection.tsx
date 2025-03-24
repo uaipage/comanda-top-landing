@@ -76,7 +76,7 @@ const CtaSection = () => {
                   id="name" 
                   type="text" 
                   placeholder="Ex: Cantina Bella Napoli" 
-                  className="w-full" 
+                  className="w-full text-gray-800" 
                   value={restaurantName}
                   onChange={(e) => setRestaurantName(e.target.value)}
                   aria-required="true"
@@ -88,7 +88,7 @@ const CtaSection = () => {
                   id="owner" 
                   type="text" 
                   placeholder="Ex: Carlos Oliveira" 
-                  className="w-full" 
+                  className="w-full text-gray-800" 
                   value={ownerName}
                   onChange={(e) => setOwnerName(e.target.value)}
                   aria-required="true"
@@ -100,7 +100,7 @@ const CtaSection = () => {
                   id="email" 
                   type="email" 
                   placeholder="Ex: contato@seurestaurante.com" 
-                  className="w-full" 
+                  className="w-full text-gray-800" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   aria-required="true"
@@ -112,7 +112,7 @@ const CtaSection = () => {
                   id="phone" 
                   type="tel" 
                   placeholder="(00) 00000-0000" 
-                  className="w-full" 
+                  className="w-full text-gray-800" 
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   aria-required="true"

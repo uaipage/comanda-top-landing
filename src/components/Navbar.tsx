@@ -48,10 +48,10 @@ const Navbar = () => {
         <div className="flex items-center">
           <a 
             href="#" 
-            className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-mesatech-blue to-mesatech-blue-dark bg-clip-text text-transparent focus:outline-none focus:ring-2 focus:ring-mesatech-blue rounded-md"
+            className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-comandatop-blue to-comandatop-blue-dark bg-clip-text text-transparent focus:outline-none focus:ring-2 focus:ring-comandatop-blue rounded-md"
             aria-label="ComandaTop - Página inicial"
           >
-            Comanda<span className="text-mesatech-orange">Top</span>
+            Comanda<span className="text-comandatop-orange">Top</span>
           </a>
         </div>
         
@@ -61,7 +61,7 @@ const Navbar = () => {
             <a 
               key={link.href}
               href={link.href} 
-              className="text-gray-700 hover:text-mesatech-blue transition-colors focus:outline-none focus:ring-2 focus:ring-mesatech-blue rounded-md px-2 py-1"
+              className="text-gray-700 hover:text-comandatop-blue transition-colors focus:outline-none focus:ring-2 focus:ring-comandatop-blue rounded-md px-2 py-1"
               aria-label={link.label}
             >
               {link.label}
@@ -71,7 +71,7 @@ const Navbar = () => {
         
         <div className="flex items-center space-x-2">
           <button 
-            className="hidden md:inline-flex bg-mesatech-blue hover:bg-mesatech-blue-dark text-white px-4 py-2 rounded-lg transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-mesatech-blue focus:ring-offset-2"
+            className="hidden md:inline-flex bg-comandatop-blue hover:bg-comandatop-blue-dark text-white px-4 py-2 rounded-lg transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-comandatop-blue focus:ring-offset-2"
             aria-label={t("login")}
           >
             {t("login")}
@@ -82,7 +82,7 @@ const Navbar = () => {
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
               <DrawerTrigger asChild>
                 <button 
-                  className="md:hidden text-gray-700 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-mesatech-blue"
+                  className="md:hidden text-gray-700 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-comandatop-blue"
                   aria-label="Abrir menu de navegação"
                   aria-expanded={isOpen}
                 >
@@ -91,12 +91,12 @@ const Navbar = () => {
               </DrawerTrigger>
               <DrawerContent className="p-4">
                 <div className="flex justify-between items-center mb-6">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-mesatech-blue to-mesatech-blue-dark bg-clip-text text-transparent">
-                    Comanda<span className="text-mesatech-orange">Top</span>
+                  <span className="text-2xl font-bold bg-gradient-to-r from-comandatop-blue to-comandatop-blue-dark bg-clip-text text-transparent">
+                    Comanda<span className="text-comandatop-orange">Top</span>
                   </span>
                   <DrawerClose asChild>
                     <button 
-                      className="rounded-full p-2 text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-mesatech-blue"
+                      className="rounded-full p-2 text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-comandatop-blue"
                       aria-label="Fechar menu de navegação"
                     >
                       <X className="h-6 w-6" aria-hidden="true" />
@@ -109,14 +109,14 @@ const Navbar = () => {
                     <a
                       key={link.href}
                       href={link.href}
-                      className="px-4 py-3 text-lg border-b border-gray-100 text-gray-700 hover:text-mesatech-blue transition-colors focus:outline-none focus:ring-2 focus:ring-mesatech-blue rounded-md"
+                      className="px-4 py-3 text-lg border-b border-gray-100 text-gray-700 hover:text-comandatop-blue transition-colors focus:outline-none focus:ring-2 focus:ring-comandatop-blue rounded-md"
                       onClick={() => setIsOpen(false)}
                     >
                       {link.label}
                     </a>
                   ))}
                   <button 
-                    className="w-full mt-4 bg-mesatech-blue hover:bg-mesatech-blue-dark text-white px-4 py-3 rounded-lg transition-colors shadow-sm text-center focus:outline-none focus:ring-2 focus:ring-mesatech-blue focus:ring-offset-2"
+                    className="w-full mt-4 bg-comandatop-blue hover:bg-comandatop-blue-dark text-white px-4 py-3 rounded-lg transition-colors shadow-sm text-center focus:outline-none focus:ring-2 focus:ring-comandatop-blue focus:ring-offset-2"
                     aria-label={t("login")}
                   >
                     {t("login")}

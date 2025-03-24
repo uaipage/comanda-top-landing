@@ -50,7 +50,7 @@ const ComparisonSection = () => {
               <tr>
                 <th scope="col" className="text-left p-4 bg-gray-100 rounded-tl-lg">{t("aspect")}</th>
                 <th scope="col" className="p-4 bg-gray-200 text-center">Gestão Tradicional</th>
-                <th scope="col" className="p-4 bg-mesatech-blue text-white text-center rounded-tr-lg">Gestão com ComandaTop</th>
+                <th scope="col" className="p-4 bg-comandatop-blue text-white text-center rounded-tr-lg">Gestão com ComandaTop</th>
               </tr>
             </thead>
             <tbody>

@@ -64,7 +64,7 @@ const CtaSection = () => {
   };
 
   return (
-    <section id="cta" className="py-20 px-6 md:px-12 bg-gradient-to-r from-mesatech-blue to-mesatech-blue-dark text-white">
+    <section id="cta" className="py-20 px-6 md:px-12 bg-gradient-to-r from-comandatop-blue to-comandatop-blue-dark text-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -74,13 +74,12 @@ const CtaSection = () => {
             </p>
             <ul className="space-y-4 mb-8">
               {[
-                "Comece a usar em menos de 24 horas",
+                "Comece a usar agora mesmo",
                 "Suporte técnico 7 dias por semana",
-                "Treinamento gratuito para sua equipe",
                 "30 dias de teste sem compromisso"
               ].map((item, index) => (
                 <li key={index} className="flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-mesatech-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <svg className="w-6 h-6 mr-2 text-comandatop-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {item}
@@ -140,7 +139,7 @@ const CtaSection = () => {
                   aria-required="true"
                 />
               </div>
-              <Button type="submit" className="w-full bg-mesatech-orange hover:bg-mesatech-orange-dark text-white font-medium py-3 px-4 rounded-lg text-lg">
+              <Button type="submit" className="w-full bg-comandatop-orange hover:bg-comandatop-orange-dark text-white font-medium py-3 px-4 rounded-lg text-lg">
                 Começar teste gratuito
               </Button>
               <p className="text-xs text-gray-500 text-center mt-4">

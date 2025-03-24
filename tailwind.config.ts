@@ -63,7 +63,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				mesatech: {
+				comandatop: {
 					blue: {
 						DEFAULT: '#1EAEDB',
 						light: '#33C3F0',

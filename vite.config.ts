@@ -1,4 +1,3 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -22,11 +21,13 @@ export default defineConfig(({ command, mode }) => ({
   },
   // Configuração para suportar SSR
   build: {
-    ssr: command === 'build' && mode === 'production' ? true : undefined,
-    outDir: command === 'build' && mode === 'production' ? 'dist' : 'dist/client',
+    ssr: command === 'build' && mode === 'production' ? 'src/entry-server.tsx' : undefined, // Caminho para o arquivo de entrada do servidor
+    outDir: 'dist', // Diretório de saída
     rollupOptions: {
-      input: command === 'build' && mode === 'production' ? 
-        { server: './server.js', client: './index.html' } : undefined
-    }
-  }
+      input: {
+        server: 'src/entry-server.tsx',  // Caminho para o arquivo de entrada do servidor
+        client: './index.html',         // Caminho do arquivo HTML do cliente
+      },
+    },
+  },
 }));

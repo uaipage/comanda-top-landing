@@ -22,12 +22,12 @@ const HeroSection = () => {
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div 
-          className="absolute -top-40 -right-40 w-96 h-96 bg-mesatech-blue/5 rounded-full filter blur-3xl"
+          className="absolute -top-40 -right-40 w-96 h-96 bg-comandatop-blue/5 rounded-full filter blur-3xl"
           style={{ transform: 'translate3d(0, 0, 0)' }}
           aria-hidden="true"
         />
         <div 
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-mesatech-orange/5 rounded-full filter blur-3xl"
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-comandatop-orange/5 rounded-full filter blur-3xl"
           style={{ transform: 'translate3d(0, 0, 0)' }}
           aria-hidden="true"
         />
@@ -41,7 +41,7 @@ const HeroSection = () => {
           {/* Left column - Text content */}
           <div className="flex flex-col items-start space-y-6 sm:space-y-8">
             <div className={`transition-all duration-700 transform ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="inline-block px-3 py-1 bg-mesatech-blue/10 rounded-full text-mesatech-blue text-sm font-medium mb-4 sm:mb-6">
+              <div className="inline-block px-3 py-1 bg-comandatop-blue/10 rounded-full text-comandatop-blue text-sm font-medium mb-4 sm:mb-6">
                 {t('completeSystemForRestaurants')}
               </div>
               <h1 
@@ -65,10 +65,10 @@ const HeroSection = () => {
               </button>
               
               <button 
-                className="inline-flex items-center justify-center px-6 py-3 font-medium bg-white border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-mesatech-blue"
+                className="inline-flex items-center justify-center px-6 py-3 font-medium bg-white border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-comandatop-blue"
                 aria-label={t('watchDemo')}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-mesatech-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-comandatop-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -87,7 +87,7 @@ const HeroSection = () => {
                 ))}
               </div>
               <div className="text-sm text-gray-600">
-                <span className="font-semibold text-mesatech-blue">+2.000</span> {t('restaurants')}
+                <span className="font-semibold text-comandatop-blue">+2.000</span> {t('restaurants')}
                 <div className="flex items-center mt-1" aria-label="5 de 5 estrelas">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -110,7 +110,7 @@ const HeroSection = () => {
           {[
             {
               icon: (
-                <svg className="w-10 h-10 text-mesatech-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg className="w-10 h-10 text-comandatop-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               ),
@@ -119,7 +119,7 @@ const HeroSection = () => {
             },
             {
               icon: (
-                <svg className="w-10 h-10 text-mesatech-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg className="w-10 h-10 text-comandatop-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               ),
@@ -128,7 +128,7 @@ const HeroSection = () => {
             },
             {
               icon: (
-                <svg className="w-10 h-10 text-mesatech-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg className="w-10 h-10 text-comandatop-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               ),

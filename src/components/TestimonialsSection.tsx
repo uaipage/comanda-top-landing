@@ -28,7 +28,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 px-4 sm:px-6 md:px-12 bg-mesatech-blue/5" aria-labelledby="testimonials-heading">
+    <section id="testimonials" className="py-20 px-4 sm:px-6 md:px-12 bg-comandatop-blue/5" aria-labelledby="testimonials-heading">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 md:mb-16">
           <h2 id="testimonials-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">{t("testimonialsTitle")}</h2>

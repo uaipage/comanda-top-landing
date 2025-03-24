@@ -10,23 +10,23 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <span className="text-2xl font-bold text-white">
-                Comanda<span className="text-mesatech-orange">Top</span>
+                Comanda<span className="text-comandatop-orange">Top</span>
               </span>
             </div>
             <p className="mb-6 opacity-80">
               Transformando a gestão de restaurantes com tecnologia intuitiva e eficiente.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-mesatech-orange transition-colors">
+              <a href="#" className="hover:text-comandatop-orange transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-mesatech-orange transition-colors">
+              <a href="#" className="hover:text-comandatop-orange transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:text-mesatech-orange transition-colors">
+              <a href="#" className="hover:text-comandatop-orange transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:text-mesatech-orange transition-colors">
+              <a href="#" className="hover:text-comandatop-orange transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>
@@ -36,7 +36,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6 text-white">Soluções</h3>
             <ul className="space-y-3">
               {['App para Garçons', 'PDV Integrado', 'Painel Gerencial', 'Controle de Estoque', 'Marketing Digital'].map((item, index) => (
-                <li key={index}><a href="#" className="hover:text-mesatech-orange transition-colors">{item}</a></li>
+                <li key={index}><a href="#" className="hover:text-comandatop-orange transition-colors">{item}</a></li>
               ))}
             </ul>
           </div>
@@ -45,7 +45,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6 text-white">Empresa</h3>
             <ul className="space-y-3">
               {['Sobre nós', 'Cases de Sucesso', 'Blog', 'Carreiras', 'Parcerias'].map((item, index) => (
-                <li key={index}><a href="#" className="hover:text-mesatech-orange transition-colors">{item}</a></li>
+                <li key={index}><a href="#" className="hover:text-comandatop-orange transition-colors">{item}</a></li>
               ))}
             </ul>
           </div>
@@ -54,11 +54,11 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6 text-white">Contato</h3>
             <ul className="space-y-3">
               <li className="flex items-center">
-                <Mail size={18} className="mr-2 text-mesatech-orange" />
+                <Mail size={18} className="mr-2 text-comandatop-orange" />
                 <a href="mailto:contato@comandatop.com.br">contato@comandatop.com.br</a>
               </li>
               <li className="flex items-center">
-                <Phone size={18} className="mr-2 text-mesatech-orange" />
+                <Phone size={18} className="mr-2 text-comandatop-orange" />
                 <a href="tel:+55119999-9999">(11) 9999-9999</a>
               </li>
             </ul>

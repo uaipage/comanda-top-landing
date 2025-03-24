@@ -58,7 +58,7 @@
   }
   
   .cta-button {
-    @apply relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition-all bg-mesatech-orange rounded-lg hover:bg-mesatech-orange-light text-white shadow-md;
+    @apply relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition-all bg-comandatop-orange rounded-lg hover:bg-comandatop-orange-light text-white shadow-md;
   }
   
   .cta-button::before {

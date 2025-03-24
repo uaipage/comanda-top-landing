@@ -8,7 +8,7 @@ const SolutionSection = () => {
   
   const solutions = [
     {
-      icon: <Smartphone className="w-8 h-8 text-mesatech-blue" aria-hidden="true" />,
+      icon: <Smartphone className="w-8 h-8 text-comandatop-blue" aria-hidden="true" />,
       title: t("waiterApp"),
       benefits: [
         t("digitalOrderTaking"),
@@ -18,7 +18,7 @@ const SolutionSection = () => {
       ]
     },
     {
-      icon: <Laptop className="w-8 h-8 text-mesatech-blue" aria-hidden="true" />,
+      icon: <Laptop className="w-8 h-8 text-comandatop-blue" aria-hidden="true" />,
       title: t("integratedPOS"),
       benefits: [
         t("quickCheckout"),
@@ -28,7 +28,7 @@ const SolutionSection = () => {
       ]
     },
     {
-      icon: <BarChart4 className="w-8 h-8 text-mesatech-blue" aria-hidden="true" />,
+      icon: <BarChart4 className="w-8 h-8 text-comandatop-blue" aria-hidden="true" />,
       title: t("managerialPanel"),
       benefits: [
         t("realTimeSalesReports"),
@@ -52,14 +52,14 @@ const SolutionSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
           {solutions.map((solution, index) => (
             <div key={index} className="bg-gray-50 rounded-xl p-6 sm:p-8 shadow-md hover:shadow-lg transition-shadow">
-              <div className="bg-mesatech-blue/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+              <div className="bg-comandatop-blue/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 {solution.icon}
               </div>
               <h3 className="text-lg sm:text-xl font-semibold mb-4">{solution.title}</h3>
               <ul className="space-y-3">
                 {solution.benefits.map((benefit, i) => (
                   <li key={i} className="flex items-start">
-                    <Check className="w-5 h-5 text-mesatech-orange mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                    <Check className="w-5 h-5 text-comandatop-orange mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
                     <span>{benefit}</span>
                   </li>
                 ))}

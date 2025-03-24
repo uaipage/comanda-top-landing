@@ -1,5 +1,3 @@
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
 
-createRoot(document.getElementById("root")!).render(<App />);
+// Este arquivo agora apenas re-exporta entry-client.tsx
+export * from './entry-client';

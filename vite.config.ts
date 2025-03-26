@@ -6,10 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // Função para determinar a base URL correta com base no ambiente
 function determineBaseUrl(mode: string) {
-  if (mode === 'github') {
-    return '/comanda-top-landing/';
-  }
-  return '/'; // URL base padrão para o domínio principal
+  return mode === 'github' ? '/comanda-top-landing/' : '/';
 }
 
 export default defineConfig(({ command, mode }) => ({

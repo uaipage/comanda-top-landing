@@ -30,11 +30,7 @@ jobs:
 
       - name: Build app para GitHub Pages
         run: |
-          npm run build:github
-
-      - name: Execute prerender para SSG
-        run: |
-          npm run prerender
+          npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

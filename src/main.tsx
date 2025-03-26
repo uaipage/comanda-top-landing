@@ -9,6 +9,15 @@ import "./index.css";
 
 const queryClient = new QueryClient();
 
+// Detectar qual base URL estamos usando
+const getBasename = () => {
+  const currentUrl = window.location.hostname;
+  if (currentUrl.includes('uaipage.github.io')) {
+    return '/comanda-top-landing';
+  }
+  return '/';
+};
+
 // Função para iniciar a aplicação com SSG
 function iniciarAplicacao() {
   const container = document.getElementById('root');
@@ -27,14 +36,15 @@ function iniciarAplicacao() {
       <React.StrictMode>
         <QueryClientProvider client={queryClient}>
           <I18nProvider>
-            <BrowserRouter>
+            <BrowserRouter basename={getBasename()}>
               <App />
             </BrowserRouter>
           </I18nProvider>
         </QueryClientProvider>
       </React.StrictMode>
     );
-    console.log('Aplicação renderizada com sucesso');
+    console.log('Aplicação renderizada com sucesso no domínio: ' + window.location.hostname);
+    console.log('Usando base path: ' + getBasename());
   } catch (error) {
     console.error('Erro ao renderizar a aplicação:', error);
   }

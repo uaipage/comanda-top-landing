@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from 'react';
-import DeviceMockups from './DeviceMockups';
 import { useI18n } from '@/context/i18nContext';
 
 const HeroSection = () => {
@@ -36,10 +35,10 @@ const HeroSection = () => {
       {/* Content Container */}
       <div className="relative pt-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
         {/* Hero content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 gap-8 lg:gap-12 items-center">
           
-          {/* Left column - Text content */}
-          <div className="flex flex-col items-start space-y-6 sm:space-y-8">
+          {/* Text content */}
+          <div className="flex flex-col items-center md:items-center space-y-6 sm:space-y-8 mx-auto text-center">
             <div className={`transition-all duration-700 transform ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="inline-block px-3 py-1 bg-comandatop-blue/10 rounded-full text-comandatop-blue text-sm font-medium mb-4 sm:mb-6">
                 {t('completeSystemForRestaurants')}
@@ -97,11 +96,6 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </div>
-          
-          {/* Right column - Device mockups */}
-          <div className={`h-96 sm:h-[500px] md:h-[540px] transition-all duration-1000 delay-400 transform ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-            <DeviceMockups />
           </div>
         </div>
         

@@ -97,7 +97,7 @@ const CtaSection = () => {
                   id="name" 
                   type="text" 
                   placeholder="Ex: Cantina Bella Napoli" 
-                  className="w-full text-gray-800" 
+                  className="w-full text-gray-800 placeholder:text-gray-400" 
                   value={restaurantName}
                   onChange={handleRestaurantNameChange}
                   aria-required="true"
@@ -109,7 +109,7 @@ const CtaSection = () => {
                   id="owner" 
                   type="text" 
                   placeholder="Ex: Carlos Oliveira" 
-                  className="w-full text-gray-800" 
+                  className="w-full text-gray-800 placeholder:text-gray-400" 
                   value={ownerName}
                   onChange={handleOwnerNameChange}
                   aria-required="true"
@@ -121,7 +121,7 @@ const CtaSection = () => {
                   id="email" 
                   type="email" 
                   placeholder="Ex: contato@seurestaurante.com" 
-                  className="w-full text-gray-800" 
+                  className="w-full text-gray-800 placeholder:text-gray-400" 
                   value={email}
                   onChange={handleEmailChange}
                   aria-required="true"
@@ -133,13 +133,16 @@ const CtaSection = () => {
                   id="phone" 
                   type="tel" 
                   placeholder="(00) 00000-0000" 
-                  className="w-full text-gray-800" 
+                  className="w-full text-gray-800 placeholder:text-gray-400" 
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   aria-required="true"
                 />
               </div>
-              <Button type="submit" className="w-full bg-comandatop-orange hover:bg-comandatop-orange-dark text-white font-medium py-3 px-4 rounded-lg text-lg">
+              <Button 
+                type="submit" 
+                className="w-full bg-comandatop-orange hover:bg-comandatop-orange-dark text-white font-medium py-3 px-4 rounded-lg text-lg"
+              >
                 Começar teste gratuito
               </Button>
               <p className="text-xs text-gray-500 text-center mt-4">

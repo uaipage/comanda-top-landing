@@ -22,8 +22,8 @@ const Index = () => {
       <ComparisonSection />
       {/* Seção de testemunhos temporariamente removida */}
       {/* <TestimonialsSection /> */}
-      <FaqSection />
       <CtaSection />
+      <FaqSection />
       <Footer />
     </div>
   );

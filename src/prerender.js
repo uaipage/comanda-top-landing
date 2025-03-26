@@ -16,7 +16,7 @@ const routes = [
 // Template básico HTML com espaço para injetar o conteúdo
 const htmlTemplate = (content, title = 'ComandaTop - Sistema para Restaurantes', basePath = '/') => `
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-base-path="${basePath}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,6 +26,7 @@ const htmlTemplate = (content, title = 'ComandaTop - Sistema para Restaurantes',
       // Script para detectar o domínio e configurar corretamente os caminhos
       (function() {
         window.__BASE_PATH__ = '${basePath}';
+        document.documentElement.dataset.basePath = window.__BASE_PATH__;
       })();
     </script>
   </head>

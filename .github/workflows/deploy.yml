@@ -1,3 +1,4 @@
+
 name: Deploy to GitHub Pages
 
 on:
@@ -27,13 +28,13 @@ jobs:
         run: |
           npm install
 
-      - name: Build app
+      - name: Build app para GitHub Pages
         run: |
-          npm run build
+          npm run build:github
 
-      # - name: Export app to static files
-      #   run: |
-      #     npm run export
+      - name: Execute prerender para SSG
+        run: |
+          npm run prerender
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

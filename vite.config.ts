@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -19,13 +20,6 @@ export default defineConfig(({ command, mode }) => ({
     },
   },
   build: {
-    ssr: command === 'build' && mode === 'production' ? 'src/entry-server.tsx' : undefined,
     outDir: 'dist',
-    rollupOptions: {
-      input: {
-        server: 'src/entry-server.tsx',
-        client: './index.html',
-      },
-    },
   },
 }));

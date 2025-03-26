@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ComandaTop - Sistema para Restaurantes</title>
     <meta name="description" content="ComandaTop - Sistema completo para gestão de restaurantes, bares e estabelecimentos gastronômicos." />
-    <script type="module" crossorigin src="/assets/index-DSnkZaql.js"></script>
+    <script>
+      // Script para detectar o domínio e ajustar o caminho base para assets
+      (function() {
+        window.__BASE_PATH__ = window.location.hostname.includes('github.io') ? '/comanda-top-landing/' : '/';
+        document.documentElement.dataset.basePath = window.__BASE_PATH__;
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-C57S8Aat.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DjvxDrKO.css">
   </head>
 
